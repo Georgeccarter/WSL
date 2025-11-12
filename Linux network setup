@@ -9,3 +9,13 @@ netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 conne
 # shutdown -h now
 Restart the WSL instance by going to the Windows command prompt and running:
 wsl -d kali-linux
+# Once kali starts, you can test out it's server capabilities.  You want to have python3 and pip, the package manager installed for the server to operate.  
+sudo apt update
+sudo apt install python3 -y
+sudo apt install python3-pip -y
+# After the installation of python3 and pip we can start the server.  This runs the server on port 8080.
+python3 -m http.server 8080
+# Now with the server running, on the Windows host machine we'll go to the browser and add the url:
+localhost:8080
+# This will show you a directory listing of where wsl is installed on your host machine.  You can also open your Windows file explorer by typing the following in the WSL, Linux instance.  Type "explorer.exe" and add the "." after that.
+explorer.exe .
