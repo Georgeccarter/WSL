@@ -11,13 +11,16 @@ Oracle Linux: (various versions like 9.1, 8.7, etc.)
 AlmaLinux
 Arch Linux
 
+# To install the distro: 
 wsl --install -d kali-linux
-If wsl --install is not available (older Windows), run:
+
+# If wsl --install is not available (older Windows), run:
 # legacy method
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 # then restart Windows, then:
 wsl --set-default-version 2
+
 # Install Kali from store or manually import a distro
 After installation: launch Kali from Start menu or run:
 wsl -d kali-linux
