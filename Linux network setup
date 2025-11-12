@@ -1,0 +1,3 @@
+# With the basic install that was described in the Activation document you will have full network functionality.  If you plan on hosting a web page or want to be able to use networking commands such as traceroute, you will have to add the following steps:
+# On the host machine, which in this case is Windows 10 or Windows 11 you will have to bind ports to the WSL instance.  This allows connections originating from a different device to have its packets forwarded from the Windows OS to the Linux instance that 
+# resides on it.
