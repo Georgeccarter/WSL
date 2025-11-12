@@ -31,3 +31,6 @@ wsl -d kali-linux
 # Once Linux is launched it will have you create a username and password.  You're going to want to update the Linux distro in the same manner that you would any other:
 sudo apt update  && sudo apt upgrade
 # You now have a working Linux distro that you can use.
+
+# If you want to delete the Linux instance and start over, you can use:
+wsl --unregister kali-linux
