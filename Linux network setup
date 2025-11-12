@@ -1,3 +1,11 @@
 # With the basic install that was described in the Activation document you will have full network functionality.  If you plan on hosting a web page or want to be able to use networking commands such as traceroute, you will have to add the following steps:
 # On the host machine, which in this case is Windows 10 or Windows 11 you will have to bind ports to the WSL instance.  This allows connections originating from a different device to have its packets forwarded from the Windows OS to the Linux instance that 
-# resides on it.
+# resides on it.  From the Linux instance, run the command:
+ip a
+# This will return the ip address that the instance has been assigned.  It will not be on the same network as the host machine.  For this example, ip returns the ip 172.27.199.145.  This is the ip that Linux has so that will be used in the netsh command.
+From a powershell command prompt:
+netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=8080 connectaddress=172.27.199.145
+# You may need to shutdown the WSL instance and restart it for the changes to take affect.  To shutdown the WSL instance:
+# shutdown -h now
+Restart the WSL instance by going to the Windows command prompt and running:
+wsl -d kali-linux
