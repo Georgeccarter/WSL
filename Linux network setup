@@ -17,5 +17,5 @@ sudo apt install python3-pip -y
 python3 -m http.server 8080
 # Now with the server running, on the Windows host machine we'll go to the browser and add the url:
 localhost:8080
-# This will show you a directory listing of where wsl is installed on your host machine.  You can also open your Windows file explorer by typing the following in the WSL, Linux instance.  Type "explorer.exe" and add the "." after that.
+# This will show you a directory listing of where wsl is installed on your host machine and all of the files that reside in that folder.  You can also open your Windows file explorer by typing the following in the WSL, Linux instance.  Type "explorer.exe" and add the "." after that.
 explorer.exe .
