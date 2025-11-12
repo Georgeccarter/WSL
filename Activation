@@ -1,0 +1,33 @@
+# Enable WSL + Install Kali (step-by-step)
+# Open PowerShell (Admin) and enable required features:
+# Enable WSL and Virtual Machine Platform
+# To see the available distros for WSL you can run "wsl --list --online"
+Ubuntu: (various versions like Ubuntu 24.04 LTS, 22.04 LTS, 20.04 LTS, etc.)
+Debian GNU/Linux
+Kali Linux
+openSUSE Leap
+SUSE Linux Enterprise Server
+Oracle Linux: (various versions like 9.1, 8.7, etc.)
+AlmaLinux
+Arch Linux
+
+wsl --install -d kali-linux
+If wsl --install is not available (older Windows), run:
+# legacy method
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+# then restart Windows, then:
+wsl --set-default-version 2
+# Install Kali from store or manually import a distro
+After installation: launch Kali from Start menu or run:
+wsl -d kali-linux
+----------------------------------
+| Windows PowerShell (Admin) |
+| > wsl --install -d kali-linux |
+| Installing, please wait... |
+| Done. Launching kali-linux... |
+----------------------------------
+
+# Once Linux is launched it will have you create a username and password.  You're going to want to update the Linux distro in the same manner that you would any other:
+sudo apt update  && sudo apt upgrade
+# You now have a working Linux distro that you can use.
