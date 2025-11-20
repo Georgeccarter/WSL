@@ -31,3 +31,10 @@ SUSE-Linux-Enterprise-15-SP6    SUSE Linux Enterprise 15 SP6
 wsl --install
 # To install the distro:
 wsl --install -d Ubuntu-22.04
+# If you close the window, you can always open the command prompt again and run the following command to restart;
+wsl -d ubuntu-22.04
+Ubuntu will finalize installation.
+It will prompt:
+UNIX username (this is your Linux user, not your AD/domain user)
+Password (and confirmation)
+# You now have a working Linux installation
