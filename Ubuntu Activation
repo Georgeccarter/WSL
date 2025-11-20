@@ -1,8 +1,8 @@
 # Enable WSL + Install Ubuntu (step-by-step)
-1. Open an elevated terminal
+# 1. Open an elevated terminal
 # Open PowerShell (Admin) and enable required features:
 # Enable WSL and Virtual Machine Platform
-# To see the available distros for WSL you can run:
+# 2. List available distros
 wsl --list --online
 NAME                            FRIENDLY NAME
 AlmaLinux-8                     AlmaLinux OS 8
